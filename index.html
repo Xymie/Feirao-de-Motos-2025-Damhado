@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feirão de Motos 2025</title>
+    <link rel="icon" type="image/png" href="logo-fusion-moto-fest.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Swiper.js CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Header Compacto -->
+    <header class="fusion-header">
+        <div class="fusion-header-content">
+            <div class="fusion-header-title">
+                <span class="fusion-header-icon"><i class="fas fa-motorcycle"></i></span>
+                <span class="fusion-header-text">Fusion Moto Fest 2025</span>
+            </div>
+            <div class="fusion-header-subtitle">O maior evento de motos da região!</div>
+            <nav class="fusion-header-nav">
+                <a href="#sobre" class="fusion-nav-btn"><i class="fas fa-info-circle"></i><span class="btn-text">Sobre</span></a>
+                <a href="#inscricao" class="fusion-nav-btn"><i class="fas fa-user-plus"></i><span class="btn-text">Inscreva-se</span></a>
+                <a href="#patrocinadores" class="fusion-nav-btn"><i class="fas fa-handshake"></i><span class="btn-text">Apoiadores</span></a>
+                <a href="#lojas-confirmadas" class="fusion-nav-btn"><i class="fas fa-store"></i><span class="btn-text">Lojas</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Bloco Principal -->
+    <main class="main-content fusion-bg" id="sobre">
+        <div class="fusion-container">
+            <!-- Bloco Esquerdo: Logo e Informações do Evento -->
+            <div class="fusion-left">
+                <div class="fusion-logo-title">
+                    <img src="logo-fusion-moto-fest.png" alt="Logo Fusion Moto Fest" class="fusion-logo">
+                    <div class="fusion-title-block">
+                        <h2 class="fusion-title">Fusion Moto Fest</h2>
+                        <span class="fusion-edition">1ª Edição</span>
+                    </div>
+                </div>
+                <div class="fusion-event-details">
+                    <p><i class="fas fa-calendar-alt"></i> <b>08, 09 e 10 de agosto de 2025</b></p>
+                    <p><i class="fas fa-clock"></i> Das 08h às 20h</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Centro Regional de Eventos</p>
+                    <p><i class="fas fa-ticket-alt"></i> <b>Entrada Franca</b> &bull; Estacionamento Gratuito</p>
+                    <p><i class="fas fa-hand-holding-heart"></i> Doe 1kg de alimento não perecível para o Banco de Alimentos</p>
+                </div>
+                <ul class="fusion-highlights">
+                    <li><i class="fas fa-store"></i> 16 melhores lojas de São José do Rio Preto</li>
+                    <li><i class="fas fa-tags"></i> Ofertas imperdíveis e descontos especiais</li>
+                    <li><i class="fas fa-gift"></i> Sorteio de brindes e prêmios incríveis</li>
+                    <li><i class="fas fa-child"></i> Playground para crianças</li>
+                    <li><i class="fas fa-utensils"></i> Praça de alimentação: espetos, lanches, pastéis, doces, churros, milho, bebidas</li>
+                    <li><i class="fas fa-user"></i> Convidado especial: caricaturas em camisetas</li>
+                </ul>
+                <div class="fusion-note">* Ofertas com até 60 dias para começar a pagar (sujeito à análise de aprovação)</div>
+            </div>
+            <!-- Bloco Direito: Formulário -->
+            <div class="fusion-right" id="inscricao">
+                <h3 class="fusion-form-title">Para receber todos os benefícios e promoções do evento, deixe seus dados abaixo:</h3>
+                <form class="fusion-form" id="registrationForm" action="https://formspree.io/f/meokvnjn" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nome completo *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="whats">WhatsApp *</label>
+                        <input type="tel" id="whats" name="whats" required placeholder="(99) 99999-9999">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Cidade *</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="source">Como conheceu?</label>
+                        <select id="source" name="source" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="anuncio">Anúncio</option>
+                            <option value="indicacao">Indicação</option>
+                            <option value="radio">Rádio</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="fusion-btn-submit">
+                        <i class="fas fa-paper-plane"></i> ENVIAR
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bloco Secundário - Carrossel de Patrocinadores -->
+    <section class="sponsors-section" id="patrocinadores">
+        <div class="container">
+            <h2>Nossos Apoiadores</h2>
+            <div class="swiper sponsors-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide sponsor-item">
+                        <img src="plogo_Ong.jpg" alt="ONG Doação e Ajuda">
+                        <h3>ONG Doação e Ajuda</h3>
+                    </div>
+                    <div class="swiper-slide sponsor-item">
+                        <img src="patrocinadores/Omni logo 2024 - Novo (1)_page-0001.jpg" alt="Omni">
+                        <h3>Omni</h3>
+                    </div>
+                    <div class="swiper-slide sponsor-item">
+                        <img src="patrocinadores/logo bmc_page-0001.jpg" alt="BMC">
+                        <h3>BMC</h3>
+                    </div>
+                    <div class="swiper-slide sponsor-item">
+                        <img src="patrocinadores/prefeitura.png" alt="Prefeitura">
+                        <h3>Prefeitura</h3>
+                    </div>
+                    <div class="swiper-slide sponsor-item">
+                        <img src="patrocinadores/toninho-da-pipoca.jpg" alt="Toninho da Pipoca">
+                        <h3>Toninho da Pipoca</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloco de Lojas Confirmadas -->
+    <section class="lojas-section" id="lojas-confirmadas">
+        <div class="container">
+            <h2 class="lojas-title">Lojas Confirmadas</h2>
+            <div class="lojas-grid">
+                <div class="loja-card">ALPHA</div>
+                <div class="loja-card">DORNELAS</div>
+                <div class="loja-card">MR</div>
+                <div class="loja-card">CAPITAO</div>
+                <div class="loja-card">MIGUEL</div>
+                <div class="loja-card">ZERO 1</div>
+                <div class="loja-card">RV</div>
+                <div class="loja-card">PHILADELPHO</div>
+                <div class="loja-card">SA&SA</div>
+                <div class="loja-card">LM</div>
+                <div class="loja-card">MOP</div>
+                <div class="loja-card">KIM</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Feirão de Motos 2025</h3>
+                    <p>O maior evento de motos da região, reunindo apaixonados por duas rodas.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-phone"></i> (17) 99206-8321</p>
+                    <p><i class="fas fa-envelope"></i> contato@feiraodemotos.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/fusionmotofest/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Feirão de Motos. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
