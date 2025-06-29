@@ -334,4 +334,57 @@ function injectCarouselKeyframes() {
     document.head.appendChild(style);
 }
 
-injectCarouselKeyframes(); 
+injectCarouselKeyframes();
+
+// Função para redirecionar para WhatsApp após envio do formulário
+function setupFormSubmission() {
+    const form = document.getElementById('registrationForm');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Mostrar mensagem de sucesso
+            const submitBtn = form.querySelector('.fusion-btn-submit');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> ENVIADO!';
+            submitBtn.style.background = '#43a047';
+            submitBtn.disabled = true;
+            
+            // Coletar dados do formulário para a mensagem do WhatsApp
+            const formData = new FormData(form);
+            const name = formData.get('name') || 'Visitante';
+            const city = formData.get('city') || 'Sua cidade';
+            
+            // Criar mensagem personalizada para o WhatsApp
+            const message = `Olá! Sou ${name} de ${city} e acabei de me inscrever no Fusion Moto Fest 2025! 🏍️
+
+Gostaria de saber mais sobre o evento e as ofertas especiais das lojas participantes.
+
+Obrigado!`;
+            
+            // Codificar a mensagem para URL
+            const encodedMessage = encodeURIComponent(message);
+            
+            // Link do grupo do WhatsApp (substitua pelo link correto do grupo)
+            const whatsappGroupLink = 'https://chat.whatsapp.com/EonYdRIFUVE8N6mgSM5Pwx?mode=r_t';
+            
+            // URL do WhatsApp com mensagem
+            const whatsappUrl = `${whatsappGroupLink}?text=${encodedMessage}`;
+            
+            // Aguardar 3 segundos e redirecionar
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+                
+                // Resetar o botão após mais alguns segundos
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = '';
+                    submitBtn.disabled = false;
+                }, 2000);
+            }, 3000);
+        });
+    }
+}
+
+// Inicializar funcionalidade do formulário
+setupFormSubmission(); 
